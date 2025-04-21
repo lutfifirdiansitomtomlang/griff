@@ -1,9 +1,9 @@
-import ModernABTestCalculator from './ModernABTestCalculator';
+import PriceOptimizationCalculator from './components/PriceOptimization/PriceOptimizationCalculator';
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-100 p-4">
-      <ModernABTestCalculator />
+      <PriceOptimizationCalculator />
     </div>
   );
 }
