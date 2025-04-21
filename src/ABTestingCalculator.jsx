@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import { 
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, 
-  ResponsiveContainer, PieChart, Pie, Cell, LineChart, Line, 
-  Area, AreaChart
+  ResponsiveContainer
 } from 'recharts';
 
 export default function ABTestCalculator() {
