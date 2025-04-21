@@ -1,13 +1,11 @@
 import React from 'react';
-import './App.css';
-import ABTestingCalculator from './ABTestingCalculator.jsx';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
 
-function App() {
-  return (
-    <div className="App">
-      <ABTestingCalculator />
-    </div>
-  );
-}
-
-export default App;
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
