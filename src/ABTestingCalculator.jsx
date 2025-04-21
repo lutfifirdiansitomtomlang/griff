@@ -294,22 +294,25 @@ export default function ABTestCalculator() {
             </div>
           </div>
           
-          {/* Statistical Significance Indicator */}
+          {/* Statistical Significance Indicator - FIXED SIZE ICON */}
           <div className="p-4 rounded-md mb-6" 
             style={{ 
               backgroundColor: results.significant ? '#dcfce7' : '#fee2e2',
               color: results.significant ? '#166534' : '#991b1b'
             }}>
             <div className="flex items-center justify-center text-lg font-bold mb-2">
-              {results.significant ? (
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              ) : (
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              )}
+              {/* Fixed-size icon wrapper */}
+              <div className="w-6 h-6 mr-2 flex items-center justify-center">
+                {results.significant ? (
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                ) : (
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                )}
+              </div>
               {results.significant 
                 ? 'Statistically Significant' 
                 : 'Not Statistically Significant'}
@@ -391,8 +394,8 @@ export default function ABTestCalculator() {
           <div className="bg-white p-4 rounded-md shadow mb-4">
             <h4 className="text-md font-semibold mb-3 text-indigo-700">Recommendations</h4>
             <div className="flex items-start">
-              <div className="bg-indigo-100 p-1 rounded-full mr-3 mt-1">
-                <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="bg-indigo-100 p-1 rounded-full mr-3 mt-1 flex-shrink-0 w-7 h-7 flex items-center justify-center">
+                <svg className="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
               </div>
