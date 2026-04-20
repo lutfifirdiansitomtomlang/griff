@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "chmod +x run && ./run"
   },
   "eslintConfig": {
     "extends": [
